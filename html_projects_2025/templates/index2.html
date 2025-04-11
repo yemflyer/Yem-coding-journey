@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Todo List</title>
+</head>
+<body>
+    <h1>My Todo List</h1>
+
+    <form id="taskForm">
+        <input type="text" id="title" placeholder="Enter a task" required>
+        <button type="submit">Add Task</button>
+    </form>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        // Fetch and display tasks
+        async function loadTasks() {
+            const response = await fetch('/tasks');
+            const tasks = await response.json();
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+
+            tasks.forEach(task => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <span style="text-decoration:${task.completed ? 'line-through' : 'none'}">
+                        ${task.title}
+                    </span>
+                    <button onclick="deleteTask(${task.id})">Delete</button>
+                    <button onclick="markComplete(${task.id})">Complete</button>
+                `;
+                taskList.appendChild(li);
+            });
+        }
+
+        // Add task
+        document.getElementById('taskForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const title = document.getElementById('title').value;
+            await fetch('/tasks', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title })
+            });
+            document.getElementById('title').value = '';
+            loadTasks();
+        });
+
+        // Delete task
+        async function deleteTask(id) {
+            await fetch(`/tasks/${id}`, { method: 'DELETE' });
+            loadTasks();
+        }
+
+        // Mark task as complete (you’ll need to add this route in Flask)
+        async function markComplete(id) {
+            await fetch(`/tasks/${id}`, {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ completed: true })
+            });
+            loadTasks();
+        }
+
+        loadTasks();
+    </script>
+</body>
+</html>
