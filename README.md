@@ -29,6 +29,13 @@ A local password manager app that lets you:
 
 📌 [https://github.com/yemflyer/Yem-coding-journey/tree/main/projects_2025/password_manager](./projects_2025/password_manager) *(update with actual path)*
 
+### 📁 4. Single page CV using html 🔐
+**Tech:** Python, HTML,  
+Frontend work designing a single page cv with html
+
+📌 [x](./html_projects_2025/templates *(update with actual path)*
+---
+
 ---
 
 ## 📂 Folder Structure
