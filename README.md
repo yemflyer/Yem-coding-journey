@@ -1,85 +1,64 @@
-Enter your name :yemi
-Enter your weight in pounds:180
-Enter your height in inches:74
-23.10810810810811
-name = input ("Enter your name :")
-weight = int(input ('Enter your weight in pounds:'))
-height = int(input ('Enter your height in inches:'))
-bmi= (weight * 703)/ (height * height)
-print (bmi)
+# 👨‍💻 Yem's Coding Journey – Projects 2025
 
-name = input ("Enter your name :")
-weight = int(input ('Enter your weight in pounds:'))
-height = int(input ('Enter your height in inches:'))
-bmi= (weight * 703)/ (height * height)
-print (bmi)
-​
-#We are building a BMI calculator of scratch 
+Welcome to my coding journey! This repository contains projects I've built while learning Python, Web APIs, and Automation. Each project represents a step in my growth as a developer.
 
-Now we had our #We are building a BMI calculator of scratch 
-benchmark
-under 18.5 --> Under zeight 
-18,5-24.9-->Normal weight-->Minimal risk
-25-29.9-->Overweight-->Increased risk
-30-34.9-->Obese-->high risk
-35-39.9-->Severly obese-->very risk
-40 and over -->Morbidly obese-->Extremly high risk
-if bmi>0:
-    if(bmi<18.5):
-        print('you are underweight.')
-    elif(bmi<=24.9):
-        print('you are Normal weight.')
-    elif(bmi<=29.9):
-        print('you are Overweight.')
-    elif(bmi<=34.9):
-        print('you are Obese.')
-    elif(bmi<=39.9):
-        print('you are Severly obese.')    
-    else:
-        print('You are morbidly obese')
-else :
-    print('enter valid inputs')
-#We use a if statement to incorporate our benchmark in our calculator
-if bmi>0:
-    if(bmi<18.5):
-        print('you are underweight.')
-    elif(bmi<=24.9):
-        print('you are Normal weight.')
-    elif(bmi<=29.9):
-        print('you are Overweight.')
-    elif(bmi<=34.9):
-        print('you are Obese.')
-    elif(bmi<=39.9):
-        print('you are Severly obese.')    
-    else:
-        print('You are morbidly obese')
-else :
-    print('enter valid inputs')
-you are Normal weight.
-#Lets bring both together 
-name = input ("Enter your name :")
-weight = int(input ('Enter your weight in pounds:'))
-height = int(input ('Enter your height in inches:'))
-bmi= (weight * 703)/ (height * height)
-print (bmi)
-if bmi>0:
-    if(bmi<18.5):
-        print(name+',you are underweight.')
-    elif(bmi<=24.9):
-        print(name+',you are Normal weight.')
-    elif(bmi<=29.9):
-        print(name+',you are Overweight.')
-    elif(bmi<=34.9):
-        print(name+',you are Obese.')
-    elif(bmi<=39.9):
-        print(name+',you are Severly obese.')    
-    else:
-        print(name+',You are morbidly obese')
-else :
-    print(name+',enter valid inputs')
-​
-Enter your name :yemi
-Enter your weight in pounds:184
-Enter your height in inches:74
-23.62162162162162
-yemi,you are Normal weight.
+---
+
+## 🚀 Completed Projects
+
+### 📁 1. Small Projects – Data Structures & OOP
+Built mini-apps and scripts to practice:
+- Classes & Objects
+- Lists, dictionaries, and algorithms
+- Basic problem-solving
+
+### 📁 2. API-based Project – Flask Todo List 📝
+**Tech:** Python, Flask, REST API  
+A simple and functional Todo List app where you can:
+- Add, retrieve, and delete tasks via HTTP methods
+- Learn RESTful route handling (`GET`, `POST`, `DELETE`)
+
+📌 [https://github.com/yemflyer/Yem-coding-journey/blob/main/projects_2025/my_api.py](./projects_2025/todo_flask_app) *(update with actual path)*
+
+### 📁 3. Final Project – Password Manager 🔐
+**Tech:** Python, File Handling, Automation  
+A local password manager app that lets you:
+- Securely store passwords
+- Automatically generate strong passwords
+- Save data to a file
+
+📌 [https://github.com/yemflyer/Yem-coding-journey/tree/main/projects_2025/password_manager](./projects_2025/password_manager) *(update with actual path)*
+
+---
+
+## 📂 Folder Structure
+
+
+
+
+
+---
+
+## 🧠 Skills Gained
+
+- Python fundamentals & OOP
+- Building APIs with Flask
+- JSON data handling
+- Git & GitHub version control
+- Writing clear code & documentation
+
+---
+
+## 📈 Next Goals
+
+- Learn JavaScript basics
+- Explore frontend frameworks (React or Vue)
+- Deploy a Flask app to the web (Heroku or Render)
+- Dive into unit testing and CI/CD
+- Connect a storage (sql) to our API 
+
+---
+
+### 💬 Connect with me
+
+Feel free to fork, star, or reach out if you’d like to collaborate or share feedback!
